@@ -46,6 +46,8 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
 5. Use the tarball of Blender from the Blender download page, _not_ the flatpak version from the software center!
 
+    For install hints look [here](https://ubuntuhandbook.org/index.php/2021/12/blender-3-0-released-install-tarball/).
+
     To see if the flatpak supports HIP yet, follow these issues / proposals:
     - https://github.com/flatpak/flatpak/issues/5383
     - https://github.com/flathub/org.blender.Blender/issues/121
