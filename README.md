@@ -17,6 +17,15 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
     ```
 
 2. Use the install script
+    
+    First "pop" has to be added to the supported distributions of the script.
+    To do so edit the install script at /usr/bin/amdgpu-install via a text editor and add `| pop` at around line 390:
+    
+    ```bash
+    case "$ID" in
+    ubuntu|linuxmint|debian|pop)
+        ...
+    ```
 
     I'm not sure if every "usecase" is necessary (at least use "rocm" and "hip") or if the "--opencl=rocr" part is necessary.
     Important is "--no-dkms", to not build the kernel module (will fail for the newer kernel we use)
