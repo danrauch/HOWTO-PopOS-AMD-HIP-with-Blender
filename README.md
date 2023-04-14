@@ -1,4 +1,4 @@
-# Install ROCM and HIP on Pop!_OS with Kernel 6.2
+# HOWTO: Install ROCM and HIP on Pop!_OS with Kernel 6.2
 
 Probably works also with other distributions which use newish kernels.
 
