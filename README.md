@@ -1,0 +1,1 @@
+# HOWTO-PopOS-AMD-HIP-with-Blender
