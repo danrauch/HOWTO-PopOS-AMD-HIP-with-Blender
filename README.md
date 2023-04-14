@@ -1,4 +1,4 @@
-# Install ROCM and HIP on Pop OS Kernel 6.2
+# Install ROCM and HIP on Pop!_OS with Kernel 6.2
 
 Probably works also with other distributions which use newish kernels.
 
@@ -47,10 +47,10 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 5. Use the tarball of Blender from the Blender download page, _not_ the flatpak version from the software center!
 
     To see if the flatpak supports HIP yet, follow these issues / proposals:
-    https://github.com/flatpak/flatpak/issues/5383
-    https://github.com/flathub/org.blender.Blender/issues/121
-    https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/issues/1535
-    https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/12612
+    - https://github.com/flatpak/flatpak/issues/5383
+    - https://github.com/flathub/org.blender.Blender/issues/121
+    - https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/issues/1535
+    - https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/12612
 
 6. Set HIP device in the Blender "Preferences"->"System" tab and activate Cycles renderer with GPU compute
 
