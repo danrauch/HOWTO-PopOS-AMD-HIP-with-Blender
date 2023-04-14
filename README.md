@@ -23,7 +23,7 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
     ```bash
     sudo amdgpu-install --usecase=rocm,hip,graphics,opencl --opencl=rocr --no-dkms
-    ``
+    ```
 
 3. Add user to groups so /dev/kfd can be accessed
 
@@ -33,7 +33,7 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
     ```bash
     sudo usermod -a -G video <your-username>
     sudo usermod -a -G render <your-username>
-    ``
+    ```
 
 4. Test if the installation was successful and the priviledges are set by running
 
