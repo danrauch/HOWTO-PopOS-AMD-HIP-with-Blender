@@ -27,12 +27,14 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
         ...
     ```
 
-    I'm not sure if every "usecase" is necessary (at least use "rocm" and "hip") or if the "--opencl=rocr" part is necessary.
-    Important is "--no-dkms", to not build the kernel module (will fail for the newer kernel we use)
-
+    Afterwards run
+    
     ```bash
     sudo amdgpu-install --usecase=rocm,hip,graphics,opencl --opencl=rocr --no-dkms
     ```
+
+    I'm not sure if every "usecase" is necessary (at least use "rocm" and "hip") or if the "--opencl=rocr" part is necessary.
+    Important is "--no-dkms", to not build the kernel module (will fail for the newer kernel we use)
 
 3. Add user to groups so /dev/kfd can be accessed
 
