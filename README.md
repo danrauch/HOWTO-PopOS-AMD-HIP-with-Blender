@@ -1,4 +1,4 @@
-# HOWTO: Install ROCM and HIP on Pop!_OS with Kernel 6.2
+# HOWTO: Install AMD ROCM / HIP on Pop!_OS with Kernel 6.2 and use it with Blender Cycles Renderer
 
 Probably works also with other distributions which use newish kernels.
 
