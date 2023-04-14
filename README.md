@@ -19,7 +19,7 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 2. Use the install script
     
     First "pop" has to be added to the supported distributions of the script.
-    To do so edit the install script at /usr/bin/amdgpu-install via a text editor and add `| pop` at around line 390:
+    To do so edit the install script at `/usr/bin/amdgpu-install` via a text editor and add `|pop` at around line 390:
     
     ```bash
     case "$ID" in
