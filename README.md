@@ -42,8 +42,8 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
     If Blender shows an error like "hip: Invalid device" it is probably because of skipping this step.
 
     ```bash
-    sudo usermod -a -G video <your-username>
-    sudo usermod -a -G render <your-username>
+    sudo usermod -a -G video $USER
+    sudo usermod -a -G render $USER
     ```
 
 4. Test if the installation was successful and the priviledges are set by running
