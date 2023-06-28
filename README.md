@@ -1,25 +1,30 @@
-# HOWTO: Install AMD ROCM / HIP on Pop!_OS with Kernel 6.2 and use it with Blender Cycles Renderer
+# HOWTO: Install AMD ROCM / HIP on Pop!_OS
+
+Pop!_OS is not natively supported by ROCm and uses an unsupported kernel >=6.2 (as of June 2023).
+This guide shows how to install and use it with the Blender Cycles renderer. 
 
 Probably works also with other distributions which use newish kernels.
 
+ROCm versions tested: 5.4 and 5.5
+Blender versions tested: 3.5 and 3.6
 Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
 ## Step-by-step
 
-1. use AMD install instruction to get install script -> [link](https://docs.amd.com/bundle/ROCm-Installation-Guide-v5.4.3/page/How_to_Install_ROCm.html) (version 5.4)
+1. use AMD install instruction to get install script -> [link](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
 
-    Relevent steps (version 5.4)
+    Relevent steps (for version 5.5)
 
     ```bash
-    sudo apt-get update
-    wget https://repo.radeon.com/amdgpu-install/5.4.3/ubuntu/jammy/amdgpu-install_5.4.50403-1_all.deb 
-    sudo apt-get install ./amdgpu-install_5.4.50403-1_all.deb
+    sudo apt update
+    wget https://repo.radeon.com/amdgpu-install/5.5.1/ubuntu/focal/amdgpu-install_5.5.50501-1_all.deb
+    sudo apt install ./amdgpu-install_5.5.50501-1_all.deb
     ```
 
 2. Use the install script
     
     First "pop" has to be added to the supported distributions of the script.
-    To do so edit the install script at `/usr/bin/amdgpu-install` via a text editor and add `|pop` at around line 390:
+    To do so edit the install script at `/usr/bin/amdgpu-install` via a text editor and add `|pop` at around line 396:
     
     ```bash
     case "$ID" in
@@ -30,21 +35,22 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
     Afterwards run
     
     ```bash
-    sudo amdgpu-install --usecase=rocm,hip,graphics,opencl --opencl=rocr --no-dkms
+    sudo amdgpu-install --no-dkms
     ```
 
-    I'm not sure if every "usecase" is necessary (at least use "rocm" and "hip") or if the "--opencl=rocr" part is necessary.
-    Important is "--no-dkms", to not build the kernel module (will fail for the newer kernel we use)
+    Optionally you can specify more "usecases" here if you need ROCm for different stuff like ML. Check the AMD install instructions for more details.
+    Important is "--no-dkms", to not build the kernel module (will fail for the newer kernel we use).
 
 3. Add user to groups so /dev/kfd can be accessed
 
-    I'm not sure if both are necessary, but this worked for me.
     If Blender shows an error like "hip: Invalid device" it is probably because of skipping this step.
 
     ```bash
     sudo usermod -a -G video $USER
     sudo usermod -a -G render $USER
     ```
+
+   I'm not sure if both are necessary, but this worked for me.
 
 4. Test if the installation was successful and the priviledges are set by running
 
@@ -68,3 +74,5 @@ Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 6. Set HIP device in the Blender "Preferences"->"System" tab and activate Cycles renderer with GPU compute
 
     ![image](https://user-images.githubusercontent.com/18579177/232140758-0a78c6e1-0fee-4d45-a2cf-0075c9922e43.png)
+
+   With my GPU there is no identifier string, but activating the combobox works nevertheless.
