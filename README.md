@@ -1,4 +1,4 @@
-# HOWTO: Install AMD ROCM / HIP on Pop!_OS
+# HOWTO: Install AMD ROCM / HIP on Pop!_OS (and use it with Blender)
 
 Pop!_OS is not natively supported by ROCm and uses an unsupported kernel >=6.2 (as of June 2023).
 This guide shows how to install and use it with the Blender Cycles renderer. 
