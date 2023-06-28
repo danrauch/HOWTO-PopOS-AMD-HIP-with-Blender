@@ -5,9 +5,10 @@ This guide shows how to install and use it with the Blender Cycles renderer.
 
 Probably works also with other distributions which use newish kernels.
 
-ROCm versions tested: 5.4 and 5.5
-Blender versions tested: 3.5 and 3.6
-Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
+Environment:
+- ROCm versions tested: 5.4 and 5.5
+- Blender versions tested: 3.5 and 3.6
+- Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
 ## Step-by-step
 
