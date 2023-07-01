@@ -1,16 +1,18 @@
 # HOWTO: Install AMD ROCM / HIP on Pop!_OS (and use it with Blender)
 
-Pop!_OS is not natively supported by ROCm and uses an unsupported kernel >=6.2 (as of June 2023).
-This guide shows how to install and use it with the Blender Cycles renderer. 
+This guide shows how to install ROCm on Pop OS! 22.04 and use it with the Blender Cycles renderer. 
 
-Probably works also with other distributions which use newish kernels.
+Probably works also with other unsupported distributions which use newish kernels.
 
 Environment:
-- ROCm versions tested: 5.4 and 5.5
+- Pop!_OS 22.04 LTS
+- ROCm versions tested: 5.4, 5.5 and 5.6
 - Blender versions tested: 3.5 and 3.6
 - Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
 ## Step-by-step
+
+**For ROCm versions >=5.6 and Pop OS 22.04 (current version as of July 2023) you can simply use the AMD install instructions for the very convenient "[package manager install](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)", which I highly recommend. You can skip to step 3 after completing this install variant.**
 
 1. use AMD install instruction to get install script -> [link to latest](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
 
@@ -76,6 +78,6 @@ Environment:
 
 7. Set HIP device in the Blender "Preferences"->"System" tab and activate Cycles renderer with GPU compute
 
-    ![image](https://user-images.githubusercontent.com/18579177/232140758-0a78c6e1-0fee-4d45-a2cf-0075c9922e43.png)
+    ![image](https://github.com/danrauch/HOWTO-PopOS-AMD-HIP-with-Blender/assets/18579177/8ff4e23d-bae3-48b5-87c2-ed7676d73fbb)
 
-   With my GPU there is no identifier string, but activating the combobox works nevertheless.
+   With older ROCm versions (<5.6) and for my GPU there is no identifier string, but activating the combobox works nevertheless.
