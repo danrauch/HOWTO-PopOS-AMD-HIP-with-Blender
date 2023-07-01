@@ -12,13 +12,13 @@ Environment:
 
 ## Step-by-step
 
-1. use AMD install instruction to get install script -> [link](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
+1. use AMD install instruction to get install script -> [link to latest](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
 
     Relevent steps (for version 5.5)
 
     ```bash
     sudo apt update
-    wget https://repo.radeon.com/amdgpu-install/5.5.1/ubuntu/focal/amdgpu-install_5.5.50501-1_all.deb
+    wget https://repo.radeon.com/amdgpu-install/5.5.1/ubuntu/jammy/amdgpu-install_5.5.50501-1_all.deb
     sudo apt install ./amdgpu-install_5.5.50501-1_all.deb
     ```
 
@@ -51,7 +51,7 @@ Environment:
     sudo usermod -a -G render $USER
     ```
 
-   I'm not sure if both are necessary, but this worked for me.
+   More info can be found in the [prerequisites section](https://rocm.docs.amd.com/en/latest/deploy/linux/prerequisites.html#setting-permissions-for-groups) of the official AMD documentation.
 
 4. Test if the installation was successful and the priviledges are set by running
 
