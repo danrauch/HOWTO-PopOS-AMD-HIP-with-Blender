@@ -51,9 +51,11 @@ Environment:
     sudo usermod -a -G render $USER
     ```
 
-   More info can be found in the [prerequisites section](https://rocm.docs.amd.com/en/latest/deploy/linux/prerequisites.html#setting-permissions-for-groups) of the official AMD documentation.
+    A restart might be required at this point.
 
-4. Test if the installation was successful and the priviledges are set by running
+    More info can be found in the [prerequisites section](https://rocm.docs.amd.com/en/latest/deploy/linux/prerequisites.html#setting-permissions-for-groups) of the official AMD documentation.
+
+5. Test if the installation was successful and the priviledges are set by running
 
     ```bash
     rocminfo 
@@ -62,7 +64,7 @@ Environment:
     
     If you get no permission error and your GPU is detected, everything should be set up.
 
-5. Use the tarball of Blender from the Blender download page, _not_ the flatpak version from the software center!
+6. Use the tarball of Blender from the Blender download page, _not_ the flatpak version from the software center!
 
     For install hints look [here](https://ubuntuhandbook.org/index.php/2021/12/blender-3-0-released-install-tarball/).
 
@@ -72,7 +74,7 @@ Environment:
     - https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/issues/1535
     - https://gitlab.com/freedesktop-sdk/freedesktop-sdk/-/merge_requests/12612
 
-6. Set HIP device in the Blender "Preferences"->"System" tab and activate Cycles renderer with GPU compute
+7. Set HIP device in the Blender "Preferences"->"System" tab and activate Cycles renderer with GPU compute
 
     ![image](https://user-images.githubusercontent.com/18579177/232140758-0a78c6e1-0fee-4d45-a2cf-0075c9922e43.png)
 
