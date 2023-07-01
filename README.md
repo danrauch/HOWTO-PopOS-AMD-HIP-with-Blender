@@ -12,7 +12,7 @@ Environment:
 
 ## Step-by-step
 
-**For ROCm versions >=5.6 and Pop OS 22.04 (current version as of July 2023) you can simply use the AMD install instructions for the very convenient "[package manager install](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)", which I highly recommend. You can skip to step 3 after completing this install variant.**
+**For ROCm versions >=5.6 and Pop OS 22.04 (current version as of July 2023) you can simply use the AMD install instructions for the very convenient "[package manager install](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)", which I highly recommend. Follow the steps for "Ubuntu / Ubuntu 22.04". You can skip to step 3 after completing this install variant.**
 
 1. use AMD install instruction to get install script -> [link to latest](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
 
