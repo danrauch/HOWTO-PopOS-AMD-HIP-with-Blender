@@ -6,13 +6,16 @@ Probably works also with other unsupported distributions which use newish kernel
 
 Environment:
 - Pop!_OS 22.04 LTS
-- ROCm versions tested: 5.4, 5.5 and 5.6
-- Blender versions tested: 3.5 and 3.6
+- Tested kernels: 6.2 and 6.5
+- ROCm versions tested: 5.4 - 5.7.1
+- Blender versions tested: 3.5 - 4.0
 - Tested GPU: Vega 7 (Integrated Graphics in Ryzen 7 4800H APU)
 
 ## Step-by-step
 
-**For ROCm versions >=5.6 and Pop OS 22.04 (current version as of July 2023) you can simply use the AMD install instructions for the very convenient "[package manager install](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)", which I highly recommend. Follow the steps for "Ubuntu / Ubuntu 22.04". You can skip to step 3 after completing this install variant.**
+> **For ROCm versions >=5.6 and Pop OS 22.04 (current version as of July 2023) you can simply use the AMD install instructions for the very convenient "[package manager install](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)", which I highly recommend. Follow the steps for "Ubuntu / Ubuntu 22.04". You can skip to step 3 after completing this install variant.**
+
+> **The ROCm documentation for versions 5.7.0 and 5.7.1 state that these versions do not support iGPUs, so please keep that in mind**
 
 1. use AMD install instruction to get install script -> [link to latest](https://rocm.docs.amd.com/en/latest/deploy/linux/installer/install.html) 
 
